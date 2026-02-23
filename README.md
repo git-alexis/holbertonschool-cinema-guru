@@ -1,1 +1,0 @@
-# holbertonschool-cinema-guru
