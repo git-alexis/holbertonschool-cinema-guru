@@ -1,9 +1,7 @@
 import { useEffect, useState } from "react";
 import "./App.css";
-
-//import Authentication from "./components/";
+import Authentication from "./routes/auth/Authentication";
 //import Dashboard from "./components/";
-
 import api from "./services/api";
 
 export default function App() {
@@ -31,5 +29,10 @@ export default function App() {
     //return <Dashboard />;
   //}
 
-  //return <Authentication />;
+  return (
+    <Authentication
+      setIsLoggedIn={setIsLoggedIn}
+      setUserUsername={setUserUsername}
+    />
+  );
 }
