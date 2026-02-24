@@ -40,8 +40,12 @@ export default function Authentication({
       setIsLoggedIn(true);
 
     } catch (error) {
-      console.error("Authentication error:", error);
-      alert("Authentication failed");
+      console.log("Backend error:", error.response?.data);
+
+      alert(
+        error.response?.data?.message ||
+        "Authentication failed"
+      );
     }
   };
 
