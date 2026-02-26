@@ -7,10 +7,9 @@ import {
 } from "react-router-dom";
 import Header from "../../components/navigation/Header";
 import SideBar from "../../components/navigation/SideBar";
-
-import HomePage from "../home/HomePage";
-import Favorites from "../favorites/Favorites";
-import WatchLater from "../watchlater/WatchLater";
+import HomePage from "./HomePage";
+import Favorites from "./Favorites";
+import WatchLater from "./WatchLater";
 
 export default function Dashboard({
   userUsername,

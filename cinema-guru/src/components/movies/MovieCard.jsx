@@ -3,6 +3,7 @@ import "./movies.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart, faClock } from "@fortawesome/free-solid-svg-icons";
 import api from "../../services/api";
+import popcorn from "../../assets/no-image.svg";
 
 export default function MovieCard({ movie }) {
   const [isFavorite, setIsFavorite] = useState(false);
@@ -85,6 +86,12 @@ export default function MovieCard({ movie }) {
         className={isFavorite ? "active" : ""}
         onClick={() => handleClick("favorite")}
       />
+
+      <img src={
+        movie.imageurls && movie.imageurls.length > 0
+          ? movie.imageurls[0]
+          : popcorn
+      }/>
 
       <h3>{movie.title}</h3>
 
