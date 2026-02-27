@@ -55,7 +55,11 @@ export default function SideBar() {
   }, []);
 
   return (
-    <nav className={`${small ? "small" : ""}`}>
+    <nav
+      className={small ? "small" : ""}
+      onMouseEnter={() => setSmall(false)}
+      onMouseLeave={() => setSmall(true)}
+    >
 
       {/* MENU */}
       <ul>
@@ -87,16 +91,19 @@ export default function SideBar() {
       </ul>
 
       {/* ACTIVITIES */}
-      <span>Latest Activities</span>
+      <div id="latest-activities">
+        <span>Latest Activities</span>
+        <hr></hr>
 
-      <ul>
-        {activities.slice(0, 10).map((activity) => (
-          <Activity
-            key={activity.id}
-            activity={activity}
-          />
-        ))}
-      </ul>
+        <ul>
+          {activities.slice(0, 10).map((activity) => (
+            <Activity
+              key={activity.id}
+              activity={activity}
+            />
+          ))}
+        </ul>
+      </div>
 
     </nav>
   );

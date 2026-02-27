@@ -1,0 +1,60 @@
+/* GENERAL */
+
+input, select, button {
+    border: none;
+    outline: none;
+    font-size: 18px; /* à réajuster si besoin*/
+}
+
+/* INPUT + SELECTINPUT */
+
+input[type="number"], select {
+    color: #FFFFFF;
+}
+
+#authentification-form input {
+    background-color: #FFFFFF;
+}
+
+#home-filter input, select {
+    background-color: #2C2C2C;
+}
+
+#authentification-form label {
+    font-size: 18px; /* à réajuster si besoin*/
+    color: #1C1C1C;
+}
+
+#home-filter label {
+    font-size: 18px; /* à réajuster si besoin*/
+    color: #FFFFFF;
+}
+
+/* INPUT */
+
+input:not([placeholder]) {
+    border-bottom: 2px solid #BB000E;
+}
+
+/* SELECT */
+
+select {
+    border-bottom: 2px solid #E31C25;
+}
+
+/* BUTTON */
+
+button {
+    padding: 10px 25px; /* à réajuster si besoin*/
+    background-color: #BB000E;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+/* SEARCHBAR */
+
+input[placeholder] {
+    border-radius: 15px;
+    padding: 5px;
+    color: #FFFFFF;
+}

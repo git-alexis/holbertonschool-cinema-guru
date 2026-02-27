@@ -12,7 +12,7 @@ export default function SelectInput({
   };
 
   return (
-    <div className={`${className || ""}`}>
+    <div id="sort-block" className={`${className || ""}`}>
       {label && <label>{label}</label>}
 
       <select value={value} onChange={handleSelect}>

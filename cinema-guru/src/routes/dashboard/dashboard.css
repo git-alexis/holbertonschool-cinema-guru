@@ -1,0 +1,40 @@
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    margin: 0px;
+    background-color: #222222;
+}
+
+#root {
+    height: 100%;
+}
+
+#content {
+    width: 100%;
+    padding: 50px;
+}
+
+#movies-grid {
+    list-style: none;
+    margin: 0px;
+    padding: 50px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 50px;
+}
+
+#load-more-button {
+    padding: 25px 25px 50px 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    text-align: center;
+    color: #FFFFFF;
+    text-decoration: underline #E31C25 5px;
+}

@@ -10,22 +10,24 @@ export default function Login({
 }) {
   return (
     <div>
+      <p>Sign in with your account</p>
 
       <Input
-        label="Username"
+        label="Username:"
         type="text"
         value={username}
         setValue={setUsername}
       />
 
       <Input
-        label="Password"
+        label="Password:"
         type="password"
         value={password}
         setValue={setPassword}
       />
 
       <Button
+        type="submit"
         label="Sign In"
       />
 

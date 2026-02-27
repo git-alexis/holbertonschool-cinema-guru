@@ -23,7 +23,7 @@ export default function HomePage() {
         params: {
           minYear,
           maxYear,
-          genre: genres.join(","),
+          genres: genres.join(","),
           title,
           sort,
           page: pageNumber,
@@ -60,7 +60,7 @@ export default function HomePage() {
   };
 
   return (
-    <div>
+    <div id="content">
 
       {/* Filter */}
       <Filter
@@ -77,7 +77,7 @@ export default function HomePage() {
       />
 
       {/* Movies */}
-      <ul>
+      <ul id="movies-grid">
         {movies.map((movie) => (
           <MovieCard
             key={movie.imdbId}
@@ -87,10 +87,13 @@ export default function HomePage() {
       </ul>
 
       {/* Load More */}
-      <Button
-        label="Load More.."
-        onClick={handleLoadMore}
-      />
+      <div id="load-more-button">
+        <Button
+          type="button"
+          label="Load More.."
+          onClick={handleLoadMore}
+        />
+      </div>
 
     </div>
   );

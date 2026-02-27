@@ -1,0 +1,58 @@
+#authentification-block-parent {
+    height: 100%;
+    margin-top: auto;
+    margin-bottom: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#authentification-block {
+    width: 50%;
+    background-color: #FFFFFF;
+}
+
+#authentification-block > div {
+    display: flex;
+}
+
+#authentification-block span {
+    flex: 1;
+    padding: 25px; /* à réajuster si besoin*/
+    background-color: #BB000E;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFFFFF;
+    font-size: 18px; /* à réajuster si besoin*/
+}
+
+#authentification-block span.active {
+    background-color: #E31C25;
+}
+
+#authentification-form {
+    padding: 25px; /* à réajuster si besoin*/
+}
+
+#authentification-form > div {
+    display: flex;
+    flex-direction: column;
+}
+
+#authentification-form p {
+    margin-bottom: 25px; /* à réajuster si besoin*/
+    text-align: center;
+    color: #1C1C1C;
+    font-size: 18px; /* à réajuster si besoin*/
+}
+
+#authentification-form input {
+    margin-top: 25px; /* à réajuster si besoin*/
+    margin-bottom: 50px; /* à réajuster si besoin*/
+    width: 100%;
+}
+
+#authentification-form button {
+    margin-left: auto;
+}

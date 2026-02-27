@@ -21,7 +21,7 @@ export default function Tag({
 
   return (
     <li
-      className={`${selected ? "selected" : ""}`}
+      className={`tags-filter ${selected ? "selected" : ""}`}
       onClick={handleTag}
     >
       {genre}

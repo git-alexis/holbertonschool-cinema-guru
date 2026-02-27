@@ -17,44 +17,49 @@ export default function Filter({
   setTitle,
 }) {
   const genreList = [
-    "action","drama","comedy","biography",
-    "romance","thriller","war","history",
-    "sport","sci-fi","documentary","crime","fantasy"
+    "Action","Drama","Comedy","Biography",
+    "Romance","Thriller","War","History",
+    "Sport","Sci-Fi","Documentary","Crime","Fantasy"
   ];
 
   return (
-    <div>
+    <div id="home-filter">
 
-      <SearchBar
-        title={title}
-        setTitle={setTitle}
-      />
+      <div>
+        <SearchBar
+          title={title}
+          setTitle={setTitle}
+        />
 
-      <Input
-        label="Min Date:"
-        type="number"
-        value={minYear}
-        setValue={setMinYear}
-      />
+        <div>
+          <Input
+            label="Min Date:"
+            type="number"
+            value={minYear}
+            setValue={setMinYear}
+          />
 
-      <Input
-        label="Max Date:"
-        type="number"
-        value={maxYear}
-        setValue={setMaxYear}
-      />
+          <Input
+            label="Max Date:"
+            type="number"
+            value={maxYear}
+            setValue={setMaxYear}
+          />
 
-      <SelectInput
-        label="Sort:"
-        options={[
-          "latest",
-          "oldest",
-          "highestrated",
-          "lowestrated"
-        ]}
-        value={sort}
-        setValue={setSort}
-      />
+          <SelectInput
+            label="Sort:"
+            options={[
+              "default",
+              "latest",
+              "oldest",
+              "highestrated",
+              "lowestrated"
+            ]}
+            value={sort}
+            setValue={setSort}
+          />
+        </div>
+      </div>
 
       <ul>
         {genreList.map((g) => (

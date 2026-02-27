@@ -22,11 +22,11 @@ export default function WatchLater() {
   }, []);
 
   return (
-    <div>
+    <div id="content">
 
       <h1>MOVIES TO WATCH LATER</h1>
 
-      <ul>
+      <ul id="movies-grid">
         {movies.map((movie) => (
           <MovieCard
             key={movie.imdbId}

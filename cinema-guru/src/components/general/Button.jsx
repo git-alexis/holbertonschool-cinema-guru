@@ -6,9 +6,11 @@ export default function Button({
   className,
   onClick,
   icon,
+  type,
 }) {
   return (
     <button
+      type={type}
       className={`${className || ""}`}
       onClick={onClick}
     >

@@ -50,48 +50,50 @@ export default function Authentication({
   };
 
   return (
-    <div>
+    <div id="authentification-block-parent">
+      <div id="authentification-block">
 
       {/* HEADER */}
-      <div>
+        <div>
 
-        <span
+          <span
           className={`${_switch ? "active" : ""}`}
           onClick={() => setSwitch(true)}
-        >
+          >
           Sign In
-        </span>
+          </span>
 
-        <span
+          <span
           className={`${!_switch ? "active" : ""}`}
           onClick={() => setSwitch(false)}
-        >
+          >
           Sign Up
-        </span>
+          </span>
+
+        </div>
+
+        {/* FORM */}
+        <form id="authentification-form" onSubmit={handleSubmit}>
+
+          {_switch ? (
+            <Login
+              username={username}
+              password={password}
+              setUsername={setUsername}
+              setPassword={setPassword}
+            />
+          ) : (
+            <Register
+              username={username}
+              password={password}
+              setUsername={setUsername}
+              setPassword={setPassword}
+            />
+          )}
+
+        </form>
 
       </div>
-
-      {/* FORM */}
-      <form onSubmit={handleSubmit}>
-
-        {_switch ? (
-          <Login
-            username={username}
-            password={password}
-            setUsername={setUsername}
-            setPassword={setPassword}
-          />
-        ) : (
-          <Register
-            username={username}
-            password={password}
-            setUsername={setUsername}
-            setPassword={setPassword}
-          />
-        )}
-
-      </form>
-
     </div>
   );
 }

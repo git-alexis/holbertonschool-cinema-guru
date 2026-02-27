@@ -1,0 +1,16 @@
+#latest-activities ul {
+    list-style: none;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 0px;
+}
+
+#latest-activities p {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#latest-activities p > span:nth-of-type(1),
+#latest-activities p > span:nth-of-type(2) {
+    color: #F31D27;
+}

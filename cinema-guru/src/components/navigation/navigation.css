@@ -1,0 +1,103 @@
+nav svg {
+    margin-right: 5px; /* à réajuster si besoin*/
+}
+
+#header-nav {
+    padding: 11px; /* à réajuster si besoin*/
+    display: flex;
+    background-color: #161616;
+    align-items: center;
+}
+
+#header-nav > div {
+    display: flex;
+    margin-left: auto;
+    align-items: center;
+}
+
+#header-nav p {
+    color: #FFFFFF;
+}
+
+#header-nav > p {
+    padding-left: 48px; /* à réajuster si besoin*/
+}
+
+#header-nav img {
+    width: 52px; /* à réajuster si besoin*/
+    height: 52px; /* à réajuster si besoin*/
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+#header-nav > div > p {
+    margin-left: 11px; /* à réajuster si besoin*/
+    margin-right: 36px; /* à réajuster si besoin*/
+    color: #FFFFFF;
+}
+
+#header-nav span {
+    padding-right: 48px; /* à réajuster si besoin*/
+    color: #BB000E;
+}
+
+#side-bar-content {
+    min-height: 100%;
+    width: 100%;
+    display: flex;
+}
+
+#side-bar-content > nav.small span,
+#side-bar-content > nav.small > div {
+    display: none;
+}
+
+#side-bar-content > nav {
+    padding: 25px 0px;
+    background-color: #BB000E;
+    color: #FFFFFF;
+}
+
+#side-bar-content > nav > ul {
+    margin: 0px;
+    margin-bottom: 25px;
+    padding: 0px;
+}
+
+#side-bar-content > nav > ul > li {
+    padding: 25px;
+    display: flex;
+    align-items: center;
+    font-size: 18px; /* à réajuster si besoin*/
+    cursor: pointer;
+}
+
+
+#side-bar-content > nav > ul > li.active,
+#side-bar-content > nav > ul > li:hover {
+    background-color: #E31C25;
+}
+
+
+#side-bar-content > nav svg {
+    margin: 0px;
+}
+
+#side-bar-content > nav > ul > li > span {
+    margin-left: 11px;
+}
+
+#side-bar-content > nav > div {
+    width: 206px;
+    margin: 5px;
+    padding: 5px;
+    background-color: #2C2C2C;
+}
+
+#side-bar-content > nav > div > span {
+    font-size: 25px;
+}
+
+#side-bar-content > nav hr {
+    color: #FFFFFF;
+}

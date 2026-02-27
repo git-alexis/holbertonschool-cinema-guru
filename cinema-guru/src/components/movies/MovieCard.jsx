@@ -38,54 +38,36 @@ export default function MovieCard({ movie }) {
      HANDLE CLICK
   ========================== */
   const handleClick = async (type) => {
-    try {
-      if (type === "favorite") {
-        if (isFavorite) {
-          await api.delete(`/api/titles/favorite`, {
-            data: { imdbId: movie.imdbId }
-          });
-          setIsFavorite(false);
-        } else {
-          await api.post(`/api/titles/favorite`, {
-            imdbId: movie.imdbId
-          });
-          setIsFavorite(true);
-        }
+  try {
+    if (type === "favorite") {
+      if (isFavorite) {
+        await api.delete(`/api/titles/favorite/${movie.imdbId}`);
+        setIsFavorite(false);
+      } else {
+        await api.post(`/api/titles/favorite/${movie.imdbId}`);
+        setIsFavorite(true);
       }
-
-      if (type === "watchlater") {
-        if (isWatchLater) {
-          await api.delete(`/api/titles/watchlater`, {
-            data: { imdbId: movie.imdbId }
-          });
-          setIsWatchLater(false);
-        } else {
-          await api.post(`/api/titles/watchlater`, {
-            imdbId: movie.imdbId
-          });
-          setIsWatchLater(true);
-        }
-      }
-
-    } catch (error) {
-      console.log(error);
     }
-  };
+
+    if (type === "watchlater") {
+      if (isWatchLater) {
+        await api.delete(`/api/titles/watchlater/${movie.imdbId}`);
+        setIsWatchLater(false);
+      } else {
+        await api.post(`/api/titles/watchlater/${movie.imdbId}`);
+        setIsWatchLater(true);
+      }
+    }
+
+  } catch (error) {
+    console.log(error);
+  }
+};
 
   return (
-    <li>
+  <li className="movie-card">
 
-      <FontAwesomeIcon
-        icon={faClock}
-        className={`{isWatchLater ? "active" : ""}`}
-        onClick={() => handleClick("watchlater")}
-      />
-
-      <FontAwesomeIcon
-        icon={faHeart}
-        className={isFavorite ? "active" : ""}
-        onClick={() => handleClick("favorite")}
-      />
+    <div className="movie-image-container">
 
       <img src={
         movie.imageurls && movie.imageurls.length > 0
@@ -93,14 +75,33 @@ export default function MovieCard({ movie }) {
           : popcorn
       }/>
 
-      <h3>{movie.title}</h3>
+      <div className="movie-icons">
+        <FontAwesomeIcon
+          icon={faClock}
+          className={isWatchLater ? "active" : ""}
+          onClick={() => handleClick("watchlater")}
+        />
+        <FontAwesomeIcon
+          icon={faHeart}
+          className={isFavorite ? "active" : ""}
+          onClick={() => handleClick("favorite")}
+        />
+      </div>
 
-      <p>{movie.synopsis}</p>
+      <div className="movie-title-overlay">
+        <p>{movie.title}</p>
+      </div>
 
+    </div>
+
+    <p className="movie-synopsis">{movie.synopsis}</p>
+
+    <div className="movie-genres">
       {movie.genres?.map((g) => (
         <span key={g}>{g}</span>
       ))}
+    </div>
 
-    </li>
-  );
+  </li>
+);
 }

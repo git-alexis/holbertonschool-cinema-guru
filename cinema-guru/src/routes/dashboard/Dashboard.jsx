@@ -17,7 +17,6 @@ export default function Dashboard({
 }) {
   return (
     <BrowserRouter>
-      <div>
 
         {/* Header */}
         <Header
@@ -25,18 +24,19 @@ export default function Dashboard({
           setIsLoggedIn={setIsLoggedIn}
         />
 
-        {/* Sidebar */}
-        <SideBar />
+        <div id="side-bar-content">
+          {/* Sidebar */}
+          <SideBar />
 
-        {/* Routing */}
-        <Routes>
-          <Route path="/home" element={<HomePage />} />
-          <Route path="/favorites" element={<Favorites />} />
-          <Route path="/watchlater" element={<WatchLater />} />
-          <Route path="*" element={<Navigate to="/home" />} />
-        </Routes>
+          {/* Routing */}
+          <Routes>
+            <Route path="/home" element={<HomePage />} />
+            <Route path="/favorites" element={<Favorites />} />
+            <Route path="/watchlater" element={<WatchLater />} />
+            <Route path="*" element={<Navigate to="/home" />} />
+          </Routes>
+        </div>
 
-      </div>
     </BrowserRouter>
   );
 }
